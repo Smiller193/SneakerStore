@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GzK-VX-tlf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart-->
+        <scene sceneID="3Vp-IG-KB4">
+            <objects>
+                <viewController id="3Gy-EL-biF" customClass="ShoppingCartViewController" customModule="WBProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FwF-I0-bw4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EQS-BJ-22E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vT4-UY-eka">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="za6-gg-pwG">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EQS-BJ-22E" firstAttribute="leading" secondItem="FwF-I0-bw4" secondAttribute="leading" id="5Z3-kc-c8M"/>
+                            <constraint firstAttribute="trailing" secondItem="EQS-BJ-22E" secondAttribute="trailing" id="RrG-6Q-OAn"/>
+                            <constraint firstAttribute="bottom" secondItem="EQS-BJ-22E" secondAttribute="bottom" id="hoO-Fy-Mes"/>
+                            <constraint firstItem="EQS-BJ-22E" firstAttribute="top" secondItem="FwF-I0-bw4" secondAttribute="top" id="qPl-rS-elC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qVw-IX-kF6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cart" id="rDw-9F-0qd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTI-nH-oqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="367.46626686656674"/>
+        </scene>
+        <!--Shopping Cart-->
+        <scene sceneID="SnT-kg-k81">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GzK-VX-tlf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shopping Cart" image="shoppingUnselected" selectedImage="shopping" id="w6O-82-fcL"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4eO-EU-erE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Gy-EL-biF" kind="relationship" relationship="rootViewController" id="NZT-US-RcA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bO5-eb-gKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.19999999999999" y="367.46626686656674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shopping" width="37.5" height="37.5"/>
+        <image name="shoppingUnselected" width="37.5" height="37.5"/>
+    </resources>
+</document>
